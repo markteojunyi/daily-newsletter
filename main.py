@@ -43,8 +43,8 @@ def run():
     print("-" * 40 + "\n")
 
     # Pause to avoid hitting the API rate limit
-    print("Waiting 30 seconds before next agent...")
-    time.sleep(30)
+    print("Waiting 75 seconds before next agent...")
+    time.sleep(75)
 
     # Step 2: Writer drafts the newsletter
     draft = writer_agent(
@@ -58,8 +58,8 @@ def run():
     print("-" * 40 + "\n")
 
     # Pause again before the editor
-    print("Waiting 30 seconds before next agent...")
-    time.sleep(30)
+    print("Waiting 75 seconds before next agent...")
+    time.sleep(75)
 
     # Step 3: Editor polishes the draft
     final = editor_agent(draft=draft)
