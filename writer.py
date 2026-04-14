@@ -3,14 +3,9 @@ import time
 
 import anthropic
 
-from config import ANTHROPIC_API_KEY, MAX_TOKENS, MODEL
+from config import ANTHROPIC_API_KEY, AUDIENCE, MAX_TOKENS, MODEL
 
 client = anthropic.Anthropic(api_key=ANTHROPIC_API_KEY, max_retries=0)
-
-AUDIENCE = """A senior transformation and innovation professional with a Lean Six Sigma background,
-aspiring to become an Innovation Director. Wants to understand not just what is new in AI and LLMs,
-but what it means for organisations — how to adopt it, what the obstacles are, and what leaders
-should do about it. Prefers concise, strategic insights over technical detail."""
 
 
 def write_newsletter(stories: list[dict]) -> str:
