@@ -12,9 +12,8 @@ FEEDS = [
      "https://news.google.com/rss/search?q=LLM+model+release+OR+update&hl=en-US&gl=US&ceid=US:en"),
     ("Google News — AI adoption",
      "https://news.google.com/rss/search?q=%22AI+adoption%22+enterprise&hl=en-US&gl=US&ceid=US:en"),
-     ("Anthropic Blog", "https://www.anthropic.com/news/"),
-     ("OpenAI Blog", "https://openai.com/news"),
-     ("CIO.com", "https://www.cio.com")
+    ("OpenAI Blog", "https://openai.com/blog/rss.xml"),
+    ("VentureBeat AI", "https://venturebeat.com/category/ai/feed/"),
 ]
 
 MAX_AGE_DAYS = 3
