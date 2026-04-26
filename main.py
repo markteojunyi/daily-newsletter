@@ -1,3 +1,4 @@
+from database import mark_seen
 from fetcher import fetch_stories
 from sender import send_newsletter
 from writer import write_newsletter
@@ -8,7 +9,7 @@ def run():
 
     stories = fetch_stories()
     if not stories:
-        print("No stories found. Exiting.")
+        print("No new stories found. Exiting.")
         return
 
     newsletter = write_newsletter(stories)
@@ -18,6 +19,9 @@ def run():
     print("-" * 40 + "\n")
 
     send_newsletter(newsletter_text=newsletter, topic="AI & Technology")
+
+    # Persist after a successful send so a failed send doesn't poison the DB.
+    mark_seen(stories)
     print("\nDone!")
 
 
